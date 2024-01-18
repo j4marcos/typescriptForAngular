@@ -1,3 +1,8 @@
+
+
+
+console.log(Robo);
+
 type hero = {
   name: string;
   capa: boolean;

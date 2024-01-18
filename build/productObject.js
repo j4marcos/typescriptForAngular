@@ -24,3 +24,22 @@ function getDatabase(id) {
 }
 const nums = [1, 2, 3];
 console.log("products");
+class Robo {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    toString() {
+        return `${this.name}:${this.id}`;
+    }
+}
+const bobo = new Robo(1, "bobo");
+console.log(bobo.toString());
+class Robo2 extends Robo {
+    constructor(id, nome, velocidade) {
+        super(id, nome);
+        this.velocidade = velocidade;
+    }
+}
+const robo2 = new Robo2(123, "robo2.0", 300);
+console.log(robo2);

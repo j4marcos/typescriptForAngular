@@ -28,30 +28,55 @@ type contagem = [number, number, number]
 const nums: contagem = [1, 2, 3]
 
 // interface é usado pra tipar uma classe 
-interface robo {
-  id: number;
-  name: String;
-  utility: string
-}
+// interface robo {
+//   id: number;
+//   name: String;
+//   utility: string
+// }
 
 interface robclass {
   readonly id: number;
-  name: String;
+  name: string;
+  toString(): string;
 }
 
 type robtype = {
   readonly id: number,
-  name: String
+  name: string
 }
 
 console.log("products")
 
-class robo implements robclass {
+class Robo implements robclass {
   id : number;
-  name: String;
+  name: string;
   constructor(id: number, name:string) {
     this.id = id 
     this.name = name
-
+  }
+  toString(): string {
+  return `${this.name}:${this.id}`
   }
 }
+
+const bobo = new Robo(1,"bobo")
+console.log(bobo.toString())
+
+// data modifiers
+/*
+public 
+private 
+protected ( privado onde as sub classes que herdaram a classe, podem acessar)
+*/
+
+class Robo2 extends Robo {
+  velocidade:number;
+  constructor(id:number,nome:string,velocidade:number) {
+    super(id,nome);
+    this.velocidade  = velocidade;
+  }
+}
+
+const robo2 = new Robo2(123,"robo2.0",300);
+
+console.log(robo2)
