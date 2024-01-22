@@ -1,5 +1,3 @@
-//data modifiers
-// types generiscs
 //decorators
 
 console.log("hello world");
