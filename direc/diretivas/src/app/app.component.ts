@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'diretivas';
-
+  styleMode = "light"
+  
+  changeMode(): void {
+    this.styleMode =  this.styleMode  == "light" ? "dark" : "light";
+  }
 }

@@ -1,1 +1,7 @@
-<p>comp-atributos works!</p>
+<p [ngClass]="status">comp-atributos works!</p>
+<button (click)="trocar()">trocar</button>
+<p [ngStyle]="{'background': 'purple', 'color' : 'yellow' }">texto de estilo alterado</p>
+<!-- 
+<input type="text" [(ngModel)]="item">
+<p>{{item}}</p> -->
+

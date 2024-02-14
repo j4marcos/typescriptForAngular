@@ -1,2 +1,6 @@
-<app-card></app-card>
+<button (click)="changeMode()">mode : {{styleMode}}</button>
+<div  [ngClass]="styleMode">
+<app-card><h1>titulo de fora</h1></app-card>
+<app-comp-atributos></app-comp-atributos>
+</div>
 <router-outlet></router-outlet>
