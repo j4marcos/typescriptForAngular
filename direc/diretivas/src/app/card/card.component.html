@@ -1,0 +1,17 @@
+<h1>my app</h1>
+<p *ngIf="isVisible">card works!</p>
+<div #anotherBlobk>
+    <p *ngIf="!isVisible">eu indico que a mensagem foi escondida {{vezes}}</p>
+</div>
+<button (click)="onClick()">ngif</button>
+<h2>lista de produtos</h2>
+<ul>
+    <li *ngFor="let p of produtos; let i = index">{{i}} {{p}}</li>
+</ul>
+
+<div [ngSwitch]="tipoPermissao">
+    <div *ngSwitchCase="'permissao 1'">vc pode poucas coisas</div>
+    <div *ngSwitchCase="'permissao 2'">vc tem algumas features</div>
+    <div *ngSwitchCase="'permissao 3'">vc pode tudo!</div>
+    <div *ngSwitchCase="'permissao 0'">vc nao pode nada</div>
+</div>
